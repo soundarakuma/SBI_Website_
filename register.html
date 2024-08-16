@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Registration</title>
+    <link rel="icon" href="./images/favicon1.jpeg">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+     <style>
+        body {
+
+    font-family: Arial, sans-serif;
+    background-image: url('./images/bg6.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.register-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 350px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#message {
+    margin-top: 10px;
+    color: red;
+}
+
+     </style>
+</head>
+<body>
+    <div class="register-container">
+        <h1>Bank Registration</h1>
+        <form id="register-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="account-number">Account Number</label>
+            <input type="text" id="account-number" name="account-number" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <button type="submit">Register</button>
+        
+            <a href="login.html" style="text-decoration: none; border: #0056b3; padding: 10px;">Login</a>
+            
+        </form>
+        <p id="message"></p>
+        
+       
+    </div>
+    
+    <script>
+        document.getElementById('register-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Retrieve form values
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const accountNumber = document.getElementById('account-number').value.trim();
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
+
+    // Basic validation
+    if (password !== confirmPassword) {
+        document.getElementById('message').textContent = 'Passwords do not match.';
+        return;
+    }
+
+    // Display success message (or handle form submission)
+    document.getElementById('message').textContent = 'Registration successful!';
+    alert('Registration successful!')
+
+    // You can add additional code here to handle the form data, e.g., sending it to a server.
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Bank Of India</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./images/favicon1.jpeg">
+</head>
+<body>
+    <header>
+        <h1 id="bank-title"></h1>
+        <nav>
+            <div class="logo">&nbsp;&nbsp;&nbsp; &nbsp;State Bank Of India</div>
+            <img src="./images/logo3.png" alt="logo1" style="display: block; width: 65px; height: 55px; margin-right: 18.5%;">
+                <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#loans.html">Loan</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <div class="language-selector">
+                    <button onclick="setLanguage('en')">English</button>
+                    <button onclick="setLanguage('ta')">தமிழ்</button>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to State bank of india</h1>
+            <p>Your trusted partner in financial services.</p>
+            <a href="register.html" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h2>Secure Banking</h2>
+            <p>Our top priority is the safety of your funds.</p>
+        </div>
+        <div class="feature">
+            <h2>24/7 Support</h2>
+            <p>We're here to assist you anytime, anywhere.</p>
+        </div>
+        <div class="feature">
+            <h2>Easy Transactions</h2>
+            <p>Manage your finances with our user-friendly interface.</p>
+        </div>
+    </section>
+    <div class="carousel-container">
+        <div class="carousel">
+            <!-- Add your images here -->
+            <img src="images/h1.jpg" alt="h1">
+            <img src="images/h2.jpg" alt="h2">
+            <img src="images/h3.jpg" alt="h3">
+            <img src="images/h4.jpg" alt="h4">
+            <img src="images/h5.jpg" alt="h5">
+            <img src="images/h6.jpg" alt="h6">
+            <img src="images/h7.jpg" alt="h7">
+            <img src="images/h8.jpg" alt="h8">
+            <img src="images/h10.jpg" alt="h10">
+            <img src="images/h11.jpg" alt="h11">
+            <img src="images/h12.jpg" alt="h12">
+            <img src="images/h13.jpg" alt="h13">
+            <img src="images/h14.jpg" alt="h14">
+            <img src="images/h15.jpg" alt="h15">
+            <img src="images/h16.jpg" alt="h16">
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <script>
+//         const translations = {
+//     en: {
+//         bankTitle: Welcome to Our Bank,
+//         home: "Home",
+//         services: "Services",
+//         about: "About Us",
+//         contact: "Contact Us",
+//         welcomeTitle: "Welcome to Our Bank",
+//         welcomeText: "We offer a range of services to cater to your banking needs. Whether it's savings, loans, or investment advice, we're here to help.",
+//         footerText: "© 2024 Our Bank. All rights reserved."
+//     },
+//     ta: {
+//         bankTitle: எங்கள் வங்கிக்கு வரவேற்கிறோம்,
+//         home: "முகப்பு",
+//         services: "சேவைகள்",
+//         about: "எங்களை பற்றி",
+//         contact: "தொடர்பு கொள்ள",
+//         welcomeTitle: "எங்கள் வங்கிக்கு வரவேற்கிறோம்",
+//         welcomeText: "உங்கள் வங்கி தேவைகளை பூர்த்தி செய்ய பல்வேறு சேவைகளை நாங்கள் வழங்குகிறோம். இது சேமிப்பு, கடன்கள் அல்லது முதலீட்டு ஆலோசனை எந்தவிதமாக இருந்தாலும், நாங்கள் உதவ தயார்.",
+//         footerText: "© 2024 எங்கள் வங்கி. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை."
+//     }
+// };
+
+// function setLanguage(language) {
+//     document.getElementById('bank-title').textContent = translations[language].bankTitle;
+//     document.getElementById('home-link').textContent = translations[language].home;
+//     document.getElementById('services-link').textContent = translations[language].services;
+//     document.getElementById('about-link').textContent = translations[language].about;
+//     document.getElementById('contact-link').textContent = translations[language].contact;
+//     document.getElementById('welcome-title').textContent = translations[language].welcomeTitle;
+//     document.getElementById('welcome-text').textContent = translations[language].welcomeText;
+//     document.getElementById('footer-text').textContent = translations[language].footerText;
+// }
+
+// // Set default language to English
+// setLanguage('en');
+
+        let currentIndex = 0;
+
+function showSlide(index) {
+    const carousel = document.querySelector('.carousel');
+    const totalImages = document.querySelectorAll('.carousel img').length;
+
+    if (index >= totalImages) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = totalImages - 1;
+    } else {
+        currentIndex = index;
+    }
+
+    const offset = -currentIndex * 1265;
+    carousel.style.transform = `translateX(${offset}px)`;
+}
+
+function nextSlide() {
+    showSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+    showSlide(currentIndex - 1);
+}
+
+// Optional: Auto-play the carousel
+setInterval(nextSlide, 3000);
+
+    </script>
+    <footer>
+        <p>&copy; 2024 State Bank Of India. All rights reserved.</p>
+    </footer>
+</body>
+</html>

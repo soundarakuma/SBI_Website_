@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Dashboard</title>
+    <link rel="icon" href="./images/favicon1.jpeg">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+     <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #39048e;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+h1 {
+    color: #343a40;
+}
+
+.account-info p {
+    margin: 10px 0;
+}
+
+.transaction-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.transaction-list li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+     </style>
+</head>
+<body>
+    <div class="sidebar">
+        <!-- <a href="index.html" style="padding: 2px; background-color: white; text-decoration: none;" >Home</a> -->
+        <h2>Bank Dashboard</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Branchaddress.html">Branch Address</a></li>
+            <li><a href="#overview">Account Overview</a></li>
+            <li><a href="#transactions">Recent Transactions</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="accounts.html">Accounts</a></li>
+            <li><a href="loans.html">Loans</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="index.html">Logout</a></li>
+
+        </ul>
+    </div>
+    <div class="main-content">
+        <section id="overview">
+            <h1>Account Overview</h1>
+            <div class="account-info">
+                <p><strong>Account Holder:</strong> John Doe</p>
+                <p><strong>Account Number:</strong> 1234567890</p>
+                <p><strong>Balance:</strong> $5,000.00</p>
+            </div>
+        </section>
+        <section id="transactions">
+            <h1>Recent Transactions</h1>
+            <ul class="transaction-list">
+                <li><span>2024-08-01</span> - <span>Deposit</span> - <span>$1,000.00</span></li>
+                <li><span>2024-08-05</span> - <span>Withdrawal</span> - <span>$200.00</span></li>
+                <li><span>2024-08-10</span> - <span>Transfer</span> - <span>$500.00</span></li>
+            </ul>
+        </section>
+        <section id="profile">
+            <h1>Profile</h1>
+            <form id="profile-form">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" value="John Doe" required>
+                
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" value="john.doe@example.com" required>
+
+                <button type="submit">Update Profile</button>
+            </form>
+        </section>
+    </div>
+    <script>
+        // Example JavaScript code to handle form submission and additional features
+
+document.getElementById('profile-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Retrieve form values
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+
+    // Simulate form submission or updating profile
+    alert(`Profile updated:\n\nName: ${name}\nEmail: ${email}`);
+});
+
+    </script>
+</body>
+</html>

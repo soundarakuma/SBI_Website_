@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Accounts</title>
+    <link rel="icon" href="./images/favicon1.jpeg">
+  <!--  <link rel="stylesheet" href="./css/accounts.style"> -->
+    </head>
+    <style>
+        /* Reset some default styles */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Container for alignment */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header and navigation bar */
+header {
+    background: #004080;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+nav {
+    float: right;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-top: -40px;
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Accounts Overview Section */
+.accounts-overview {
+    background: #007bff;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.accounts-overview h1 {
+    font-size: 2.5em;
+}
+
+.accounts-overview p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+/* Account Details Section */
+.account-details {
+    padding: 40px 0;
+    background: #fff;
+}
+
+.account-details h2 {
+    text-align: center;
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+.account {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.account h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.account p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+}
+
+/* Footer */
+footer {
+    background: #004080;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+    </style>
+     
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">State Bank Of India</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#index.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="#index.html">Accounts</a></li>
+                    <li><a href="loans.html">Loans</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html">Logout</a></li>
+                
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Accounts Overview Section -->
+    <section class="accounts-overview">
+        <div class="container">
+            <h1>Our Account Types</h1>
+            <p>Choose the account that suits your needs. We offer a range of account options for personal and business banking.</p>
+        </div>
+    </section>
+
+    <!-- Account Details Section -->
+    <section class="account-details">
+        <div class="container">
+            <h2>Account Types</h2>
+            <div class="account">
+                <h3>Checking Account</h3>
+                <p>Manage your daily transactions with ease. Our checking account offers unlimited deposits and withdrawals.</p>
+                <a href="checking-details.html" class="cta-button">Learn More</a>
+            </div>
+            <div class="account">
+                <h3>Savings Account</h3>
+                <p>Save for the future with our high-interest savings account. Enjoy competitive interest rates and flexible terms.</p>
+                <a href="savings-details.html" class="cta-button">Learn More</a>
+            </div>
+            <div class="account">
+                <h3>Business Account</h3>
+                <p>Grow your business with our tailored business accounts. Benefit from specialized services and support for your business needs.</p>
+                <a href="business-details.html" class="cta-button">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; State Bank Of India. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
